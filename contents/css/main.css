@@ -94,6 +94,11 @@ aside div.footer {
     width: 100%
 }
 
+aside img.logo-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 p.author, p.date {
     font-size: .8em;
     color: #d0d0d0
@@ -133,6 +138,9 @@ p.author, p.date {
     aside h1 {
         margin-top: 0;
         padding-top: 14px
+    }
+    aside img.logo-img {
+        width: 100px;
     }
     aside div.footer {
         display: none

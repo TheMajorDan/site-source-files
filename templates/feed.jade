@@ -4,7 +4,7 @@ rss(version='2.0',
     xmlns:wfw='http://wellformedweb.org/CommentAPI/',
     xmlns:dc='http://purl.org/dc/elements/1.1/'
     xmlns:atom='http://www.w3.org/2005/Atom')
-  channel
+channel
     - var articles = env.helpers.getArticles(contents);
     title= locals.name
     atom:link(href=locals.url + '/feed.xml', rel='self', type='application/rss+xml')
@@ -13,12 +13,12 @@ rss(version='2.0',
     pubDate= articles[0].rfc822date
     language en
     each article in articles
-      - var permalink = locals.url + article.url;
-      item
-        title= article.title
-        link= permalink
-        pubDate= article.rfc822date
-        guid(isPermaLink='true')= permalink
-        author= article.author
-        //- passing locals.url resolves all relative urls to absolute
-        description= article.getHtml(locals.url)
+        - var permalink = locals.url + article.url;
+        item
+            title= article.title
+            link= permalink
+            pubDate= article.rfc822date
+            guid(isPermaLink='true')= permalink
+            author= article.author
+            //- passing locals.url resolves all relative urls to absolute
+            description= article.getHtml(locals.url)
